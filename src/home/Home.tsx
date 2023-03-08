@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css';
 import { CarouselComponent } from '../customCarousel/CarouselComponent';
-import Cookies from 'js-cookie';
 
 export const Home = () => {
   const images = [
@@ -14,6 +13,7 @@ export const Home = () => {
     'https://picsum.photos/640/360?random=7',
   ];
   const removeCookies = () => {
+    //removing the cookies by using expire
     document.cookie =
       'loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     window.location.reload();
